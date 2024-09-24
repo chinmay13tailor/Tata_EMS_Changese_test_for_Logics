@@ -29123,7 +29123,7 @@ Children:
             - Name: Text
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"33 KV Substation"}
+              Value: {"LocaleId":"en-US","Text":"33 KV"}
             - Name: LeftMargin
               Type: BaseDataVariableType
               DataType: Size
@@ -29177,7 +29177,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -29833,7 +29833,7 @@ Children:
             - Name: Text
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"Utility"}
+              Value: {"LocaleId":"en-US","Text":"UTILITY"}
             - Name: LeftMargin
               Type: BaseDataVariableType
               DataType: Size
@@ -29862,7 +29862,7 @@ Children:
             - Name: TopMargin
               Type: BaseDataVariableType
               DataType: Size
-              Value: 3.96875
+              Value: 3.809999942779541
               Children:
               - Name: EngineeringUnits
                 Type: EUInformationType
@@ -29887,7 +29887,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -29907,7 +29907,7 @@ Children:
             - Name: FontFamily
               Type: BaseDataVariableType
               DataType: Font
-              Value: "Lucida Fax"
+              Value: ""
           - Name: Label18
             Type: ReportLabel
             Children:
@@ -30712,7 +30712,7 @@ Children:
             - Name: Text
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"Stampting"}
+              Value: {"LocaleId":"en-US","Text":"STAMPING"}
             - Name: LeftMargin
               Type: BaseDataVariableType
               DataType: Size
@@ -30741,7 +30741,7 @@ Children:
             - Name: TopMargin
               Type: BaseDataVariableType
               DataType: Size
-              Value: 3.174999952316284
+              Value: 3.809999942779541
               Children:
               - Name: EngineeringUnits
                 Type: EUInformationType
@@ -30766,7 +30766,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -30786,7 +30786,7 @@ Children:
             - Name: FontFamily
               Type: BaseDataVariableType
               DataType: Font
-              Value: "Lucida Fax"
+              Value: ""
           - Name: Stamping_Percentage
             Type: ReportLabel
             Children:
@@ -33268,7 +33268,7 @@ Children:
             - Name: TopMargin
               Type: BaseDataVariableType
               DataType: Size
-              Value: 3.174999952316284
+              Value: 3.809999942779541
               Children:
               - Name: EngineeringUnits
                 Type: EUInformationType
@@ -33293,7 +33293,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -33313,7 +33313,7 @@ Children:
             - Name: FontFamily
               Type: BaseDataVariableType
               DataType: Font
-              Value: "Lucida Fax"
+              Value: ""
         - Name: Image5
           Type: ReportImage
           Children:
@@ -33456,7 +33456,7 @@ Children:
             - Name: Text
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"BodyShop"}
+              Value: {"LocaleId":"en-US","Text":"BODYSHOP"}
             - Name: LeftMargin
               Type: BaseDataVariableType
               DataType: Size
@@ -33485,7 +33485,7 @@ Children:
             - Name: TopMargin
               Type: BaseDataVariableType
               DataType: Size
-              Value: 3.174999952316284
+              Value: 3.809999942779541
               Children:
               - Name: EngineeringUnits
                 Type: EUInformationType
@@ -33510,7 +33510,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -33530,7 +33530,7 @@ Children:
             - Name: FontFamily
               Type: BaseDataVariableType
               DataType: Font
-              Value: "Lucida Fax"
+              Value: ""
           - Name: Label32
             Type: ReportLabel
             Children:
@@ -34926,7 +34926,7 @@ Children:
             - Name: Text
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"Engine Shop"}
+              Value: {"LocaleId":"en-US","Text":"ADMIN"}
             - Name: LeftMargin
               Type: BaseDataVariableType
               DataType: Size
@@ -34955,7 +34955,7 @@ Children:
             - Name: TopMargin
               Type: BaseDataVariableType
               DataType: Size
-              Value: 2.6458332538604736
+              Value: 3.809999942779541
               Children:
               - Name: EngineeringUnits
                 Type: EUInformationType
@@ -34980,7 +34980,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -35000,7 +35000,7 @@ Children:
             - Name: FontFamily
               Type: BaseDataVariableType
               DataType: Font
-              Value: "Lucida Fax"
+              Value: ""
           - Name: Label39
             Type: ReportLabel
             Children:
@@ -36200,7 +36200,7 @@ Children:
             - Name: Text
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"PaintShop"}
+              Value: {"LocaleId":"en-US","Text":"PAINTSHOP"}
             - Name: LeftMargin
               Type: BaseDataVariableType
               DataType: Size
@@ -36229,7 +36229,7 @@ Children:
             - Name: TopMargin
               Type: BaseDataVariableType
               DataType: Size
-              Value: 3.174999952316284
+              Value: 3.809999942779541
               Children:
               - Name: EngineeringUnits
                 Type: EUInformationType
@@ -36254,7 +36254,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -36274,7 +36274,7 @@ Children:
             - Name: FontFamily
               Type: BaseDataVariableType
               DataType: Font
-              Value: "Lucida Fax"
+              Value: ""
             - Name: HorizontalAlignment
               Type: BaseVariableType
               DataType: HorizontalAlignment
@@ -37601,7 +37601,7 @@ Children:
             - Name: TopMargin
               Type: BaseDataVariableType
               DataType: Size
-              Value: 3.174999952316284
+              Value: 3.809999942779541
               Children:
               - Name: EngineeringUnits
                 Type: EUInformationType
@@ -37626,7 +37626,7 @@ Children:
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#ffffff"
             - Name: TextHorizontalAlignment
               Type: BaseVariableType
               DataType: TextHorizontalAlignment
@@ -37646,7 +37646,7 @@ Children:
             - Name: FontFamily
               Type: BaseDataVariableType
               DataType: Font
-              Value: "Lucida Fax"
+              Value: ""
           - Name: Label48
             Type: ReportLabel
             Children:
