@@ -655,6 +655,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J1_DG_PANEL_DG_IN2'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -1221,6 +1225,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J2_MCB_SWB_03_O_G_3F1'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -1535,6 +1543,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J7_STP_SWB_05_INF1'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -1849,6 +1861,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J4_PNT_SWB_07_OG3'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -2259,6 +2275,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J5_BDY_SWB_08_OG_F8'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -2585,6 +2605,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J6_TCF_SWB_02_OG_3F34'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -2831,6 +2855,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J8_ADM_EDB_01_INF2'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -3073,6 +3101,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J3_WTK-1-PMCC-0-01'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -3347,6 +3379,10 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "AND Meter = 'J9_1_DB_0_01_1F1'"
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -3606,6 +3642,11 @@ Children:
           Value: 30.0
         - Name: Values
           Type: BaseObjectType
+          Children:
+          - Name: All
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "AND Meter  NOT LIKE '99999'"
         - Name: SelectedValuePath
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -3993,7 +4034,7 @@ Children:
           - Name: PF
             Type: BaseDataVariableType
             DataType: String
-            Value: "AND Parameter = 'Pf'"
+            Value: "AND Parameter = 'PF'"
           - Name: All
             Type: BaseDataVariableType
             DataType: String
@@ -5479,7 +5520,7 @@ Children:
             - Name: Width
               Type: BaseDataVariableType
               DataType: Size
-              Value: 463.0
+              Value: 600.0
             - Name: HeaderAlignment
               Type: BaseDataVariableType
               DataType: TextHorizontalAlignment
@@ -5830,6 +5871,11 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 179.0
+          - Name: InputFormat
+            Type: BaseDataVariableType
+            DataType: DateTimePickerInputFormatEnum
+            ModellingRule: Optional
+            Value: 2
         - Name: To1
           Type: DateTimePicker
           Children:
@@ -5877,6 +5923,11 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 239.0
+          - Name: InputFormat
+            Type: BaseDataVariableType
+            DataType: DateTimePickerInputFormatEnum
+            ModellingRule: Optional
+            Value: 2
         - Name: ToLabel
           Type: Label
           Children:

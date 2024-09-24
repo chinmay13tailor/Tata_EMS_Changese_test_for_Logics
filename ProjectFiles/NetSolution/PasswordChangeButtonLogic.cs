@@ -9,7 +9,11 @@ using FTOptix.Recipe;
 using FTOptix.AuditSigning;
 using FTOptix.Alarm;
 using FTOptix.WebUI;
+using FTOptix.SQLiteStore;
+using FTOptix.MicroController;
+using FTOptix.CommunicationDriver;
 using FTOptix.RAEtherNetIP;
+using FTOptix.DataLogger;
 #endregion
 
 public class PasswordChangeButtonLogic : BaseNetLogic
@@ -17,7 +21,7 @@ public class PasswordChangeButtonLogic : BaseNetLogic
     [ExportMethod]
     public void ChangePassword()
     {
-        
+
         var passchgdialogbox = LogicObject.GetAlias("PasswordExpiredDialogType") as DialogType;
         if (passchgdialogbox == null)
         {
@@ -31,6 +35,6 @@ public class PasswordChangeButtonLogic : BaseNetLogic
         passchgdialogbox.GetVariable("ShowLableText").Value = false;
         passchgdialogbox.GetVariable("ShowFirstLogonText").Value = false;
         ownerButton.OpenDialog(passchgdialogbox, CurrUserName.NodeId);
-        
+
     }
 }

@@ -9,8 +9,11 @@ using FTOptix.AuditSigning;
 using FTOptix.Alarm;
 using FTOptix.WebUI;
 using FTOptix.Core;
-using FTOptix.UI;
+using FTOptix.SQLiteStore;
+using FTOptix.MicroController;
+using FTOptix.CommunicationDriver;
 using FTOptix.RAEtherNetIP;
+using FTOptix.DataLogger;
 #endregion
 
 public class ChildrenCounter : BaseNetLogic
@@ -19,14 +22,14 @@ public class ChildrenCounter : BaseNetLogic
     {
 
         var UserList = LogicObject.Owner.GetObject("UserList");
-       // Clean files list
+        // Clean files list
         UserList.Children.ToList().ForEach((entry) => entry.Delete());
 
         var UsersDetails = LogicObject.GetAlias("Users");
 
         foreach (var child in UsersDetails.Children.OfType<User_21CFR>())
         {
-            if (child.BrowseName != "Omori1")
+            if (child.BrowseName != "Pima")
             {
 
                 // var User = InformationModel.MakeObject<User_21CFR>(child.BrowseName);
@@ -45,8 +48,8 @@ public class ChildrenCounter : BaseNetLogic
             return;
         }
 
-        var nodePointerValue = (NodeId) nodePointerVariable.Value;
-        if (nodePointerValue == null || nodePointerValue  == NodeId.Empty)
+        var nodePointerValue = (NodeId)nodePointerVariable.Value;
+        if (nodePointerValue == null || nodePointerValue == NodeId.Empty)
         {
             Log.Warning("ChildrenCounter", "Node variable not set");
             return;

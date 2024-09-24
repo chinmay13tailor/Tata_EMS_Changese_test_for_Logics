@@ -3825,12 +3825,6 @@ Children:
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../MethodContainer1/OutputArguments/result@Pointer"
-                      Children:
-                      - Name: Mode
-                        Type: BaseVariableType
-                        DataType: DynamicLinkMode
-                        ModellingRule: Optional
-                        Value: 2
             - Name: EventArguments
               Type: MouseClickEvent
               Children:

@@ -11,7 +11,11 @@ using FTOptix.Recipe;
 using FTOptix.AuditSigning;
 using FTOptix.Alarm;
 using FTOptix.WebUI;
+using FTOptix.SQLiteStore;
+using FTOptix.MicroController;
+using FTOptix.CommunicationDriver;
 using FTOptix.RAEtherNetIP;
+using FTOptix.DataLogger;
 #endregion
 
 public class LoginButtonLogic : BaseNetLogic
@@ -93,15 +97,15 @@ public class LoginButtonLogic : BaseNetLogic
             Log.Error("LoginButtonLogic", "Missing InvalidMasterPassword alias");
             return;
         }
-       
+
 
         //---------------User Validation Start---------------------------------------
 
-        
 
-       
 
-       if (comboBox.Text == null)
+
+
+        if (comboBox.Text == null)
         {
             var ownerButton1 = (Button)Owner;
             ownerButton1.OpenDialog(InvalidUserDailogbox);
@@ -129,8 +133,8 @@ public class LoginButtonLogic : BaseNetLogic
 
 
 
-        if (string.IsNullOrEmpty(username))
-        {
+        //if (string.IsNullOrEmpty(username))
+        /*
             var ownerButton1 = (Button)Owner;
             ownerButton1.OpenDialog(InvalidUserDailogbox);
             Log.Error("EditUserDetailPanelLogic", "Cannot Login user with empty username");
@@ -138,7 +142,7 @@ public class LoginButtonLogic : BaseNetLogic
            
         
         }
-
+        */
         //---------------User Validation End---------------------------------------
 
         Button loginButton = (Button)Owner;
@@ -164,13 +168,13 @@ public class LoginButtonLogic : BaseNetLogic
             loginButton.Enabled = true;
             return;
         }
-        
+
         //var checkUserPass = usersAlias.Get<User_21CFR>(username);
 
         try
         {
             var loginResult = Session.Login(username, password);
-            
+
             if (loginResult.ResultCode == ChangeUserResultCode.PasswordExpired)
             {
                 loginButton.Enabled = true;
@@ -193,8 +197,8 @@ public class LoginButtonLogic : BaseNetLogic
             {
                 loginButton.Enabled = true;
 
-                 if (loginResult.ResultCode != ChangeUserResultCode.LoginAttemptBlocked)
-               // if (loginResult.ResultCode == ChangeUserResultCode.WrongPassword)
+                if (loginResult.ResultCode != ChangeUserResultCode.LoginAttemptBlocked)
+                // if (loginResult.ResultCode == ChangeUserResultCode.WrongPassword)
                 {
                     Log.Error("LoginButtonLogic", "Authentication failed");
 
@@ -202,6 +206,8 @@ public class LoginButtonLogic : BaseNetLogic
                     // User Login Failed Event Logging into Audit Database
                     AuditTrailLogging UserLoginFailed = new AuditTrailLogging();
                     UserLoginFailed.LogIntoAudit("Invalid login attempt", username, Session.User.BrowseName, "UserLoginEvent");
+                    var ownerButton3 = (Button)Owner;
+                    ownerButton3.OpenDialog(LoginAttemptFailedDialogbox);
                     //-----------Customized Logic End-------------------
 
                     if (username == "Pima")
@@ -229,10 +235,10 @@ public class LoginButtonLogic : BaseNetLogic
                     }
                     else
                     {
-                        var ownerButton3 = (Button)Owner;
-                        LoginAttemptFailedDialogbox.GetVariable("InvalidLoginUser").Value = username;
-                        LoginAttemptFailedDialogbox.GetVariable("RemainingAttempt").Value = LoginAttempLimit - UserDetails.Invalid_Login_Attempts;
-                        ownerButton3.OpenDialog(LoginAttemptFailedDialogbox);
+                        //var ownerButton3 = (Button)Owner;
+                        //LoginAttemptFailedDialogbox.GetVariable("InvalidLoginUser").Value = username;
+                        //LoginAttemptFailedDialogbox.GetVariable("RemainingAttempt").Value = LoginAttempLimit - UserDetails.Invalid_Login_Attempts;
+                        //ownerButton3.OpenDialog(LoginAttemptFailedDialogbox);
                     }
                 }
                 else
@@ -241,7 +247,7 @@ public class LoginButtonLogic : BaseNetLogic
 
                     Log.Error("LoginButtonLogic", "Login Attempt Blocked, Try again after 30 sec");
                 }
-                
+
             }
 
             if (loginResult.ResultCode != ChangeUserResultCode.Success)
@@ -256,7 +262,7 @@ public class LoginButtonLogic : BaseNetLogic
                     {
                         var ownerButton1 = (Button)Owner;
                         ownerButton1.OpenDialog(InvalidMasterPasswordDailogbox);
-                        
+
                         return;
                     }
                     outputMessageLogic.ExecuteMethod("SetOutputMessage", new object[] { (int)loginResult.ResultCode });
@@ -275,11 +281,11 @@ public class LoginButtonLogic : BaseNetLogic
                     // User's First Login Attempt Event Logging into Audit Database
                     AuditTrailLogging FirstLoginAtt = new AuditTrailLogging();
                     FirstLoginAtt.LogIntoAudit("First login attempt", username + "'s first login attempt after creation", Session.User.BrowseName, "UserLoginEvent");
-                    
-                    var logoutuser = Session.ChangeUser("Anonymous","");
+
+                    var logoutuser = Session.ChangeUser("Anonymous", "");
                     ComboBox loginSelectedUser = Project.Current.Get<ComboBox>("UI/UserLoginForm/Login/Username");
                     loginSelectedUser.SelectedValue = username;
-                    
+
                     var ownerButton4 = (Button)Owner;
                     passwordExpiredDialogType.GetVariable("ShowCurrentUser").Value = false;
                     passwordExpiredDialogType.GetVariable("ShowFirstLogonText").Value = true;
@@ -296,7 +302,7 @@ public class LoginButtonLogic : BaseNetLogic
                     if ((MaxPassAgeDays > 0) && (ExpAlertDays > 0))
                     {
                         int AlertAfterDays = MaxPassAgeDays - ExpAlertDays;
-                        
+
                         if (CurrPassAge.Days >= AlertAfterDays)
                         {
                             string expRemTimeMsg = "";
@@ -304,7 +310,7 @@ public class LoginButtonLogic : BaseNetLogic
                             Int32 MaxPassAgeHours = MaxPassAgeDays * 24;
                             Int32 ExpRemHours = MaxPassAgeHours - CurrPassAgeHours;
                             //Log.Info("LoginButtonLogic", "Curr Pass Age " + CurrPassAgeHours + ", Max Pass Age " + MaxPassAgeHours + ", Rem Hour " + ExpRemHours);
-                            int ExpRemDays =  MaxPassAgeDays - CurrPassAge.Days;
+                            int ExpRemDays = MaxPassAgeDays - CurrPassAge.Days;
                             if (ExpRemHours > 24)
                             {
                                 if (ExpRemDays > 1)
@@ -339,11 +345,11 @@ public class LoginButtonLogic : BaseNetLogic
                             ownerButton5.OpenDialog(PassExpiryDailogbox);
                         }
                     }
-                    
+
                 }
             }
             //-----------Customized Logic End--------------------
-            
+
         }
         catch (Exception e)
         {

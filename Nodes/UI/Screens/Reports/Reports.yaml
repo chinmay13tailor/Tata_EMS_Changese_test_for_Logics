@@ -28069,7 +28069,7 @@ Children:
             Type: BaseDataVariableType
             DataType: DateTimePickerInputFormatEnum
             ModellingRule: Optional
-            Value: 0
+            Value: 2
         - Name: Area_Selection
           Type: ComboBox
           Children:
@@ -31086,7 +31086,6 @@ Children:
     Type: BaseDataVariableType
     DataType: NodeId
     Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/NavigationSystem/HomePage3"
-- File: UserEditor/UserEditor.yaml
 - Name: ButtonSelection1
   Id: g=c4f7d4d80d2883ae073fc7eeb69fd6c1
   Supertype: ConditionalConverter

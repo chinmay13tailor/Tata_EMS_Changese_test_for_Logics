@@ -1090,11 +1090,11 @@ Children:
       - Name: GridColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#075982"
+        Value: "#e4e4e4"
       - Name: BackgroundColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#f0f0f0"
+        Value: "#808080"
       - Name: FontFamily
         Type: BaseDataVariableType
         DataType: Font
@@ -1464,6 +1464,13 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 18.0
+    - Name: CheckBoxStyle1
+      Type: CheckBoxStyle
+      Children:
+      - Name: IndicatorSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 30.0
   - Name: DataInputTextColor
     Type: BaseDataVariableType
     DataType: Color
