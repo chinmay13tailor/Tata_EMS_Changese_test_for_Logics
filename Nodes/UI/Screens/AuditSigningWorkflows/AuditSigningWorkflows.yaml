@@ -49,7 +49,7 @@ Children:
           DataType: NodeId
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/AuditSigningWorkflows/WorkflowInProgressPanel"
+          Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/Screens/AuditSigningWorkflows/WorkflowInProgressPanel"
         - Name: FalseValue
           Type: BaseDataVariableType
           DataType: NodeId
@@ -86,7 +86,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/AuditSigningWorkflows/ConfirmWorkflowPanel"
+                    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/Screens/AuditSigningWorkflows/ConfirmWorkflowPanel"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -108,7 +108,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/AuditSigningWorkflows/SignWorkflowPanel"
+                    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/Screens/AuditSigningWorkflows/SignWorkflowPanel"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -130,7 +130,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/AuditSigningWorkflows/DoubleSignWorkflowPanel"
+                    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/Screens/AuditSigningWorkflows/DoubleSignWorkflowPanel"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -3210,7 +3210,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../../../../../../Commands/UICommands@NodeId"
+            Value: "../../../../../../../../../Commands/UICommands@NodeId"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -3227,7 +3227,7 @@ Children:
             Type: BaseDataVariableType
             DataType: NodeId
             Description: {"NamespaceIndex":26,"TextId":"OpenDialogDialogDescription"}
-            Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/AuditSigningWorkflows/AuditDialogBox"
+            Value: "/Objects/Tata_EMS_Changese_test_for_Logics/UI/Screens/AuditSigningWorkflows/AuditDialogBox"
           - Name: AliasNode
             Type: BaseDataVariableType
             DataType: NodeId
@@ -3318,7 +3318,7 @@ Children:
   - Name: Store
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"8bd0f044deb71b602a941e8edf671c20","Namespace":36}
+    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/DataStores/EDB_AuditTrail"
     Children:
     - Name: Kind
       Type: PropertyType

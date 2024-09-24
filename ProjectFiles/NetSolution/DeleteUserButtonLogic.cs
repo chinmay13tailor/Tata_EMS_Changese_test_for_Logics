@@ -9,13 +9,17 @@ using FTOptix.WebUI;
 using FTOptix.Recipe;
 using FTOptix.AuditSigning;
 using FTOptix.Alarm;
+using FTOptix.SQLiteStore;
+using FTOptix.MicroController;
+using FTOptix.CommunicationDriver;
 using FTOptix.RAEtherNetIP;
+using FTOptix.DataLogger;
 #endregion
 
 public class DeleteUserButtonLogic : BaseNetLogic
 {
 
-     public override void Start()
+    public override void Start()
     {
         Label DeleteResult = Project.Current.Get<Label>("UI/NewUserEditor/EditUserDetailPanel/HorizontalLayout1/Details/DeleteUserMessage");
         DeleteResult.Text = "";
@@ -37,7 +41,7 @@ public class DeleteUserButtonLogic : BaseNetLogic
             Log.Error("UserEditor", "Cannot obtain the selected user.");
             return;
         }
-        
+
         var userVariable = Owner.Owner.Owner.Owner.GetVariable("Users");
         if (userVariable == null)
         {
@@ -56,19 +60,19 @@ public class DeleteUserButtonLogic : BaseNetLogic
             Log.Error("UserEditor", "Cannot obtain Users folder.");
             return;
         }
-        Log.Info("UserEditor","User to be deleted: " + userObjectToRemove.BrowseName + "Curr User: " + Session.User.BrowseName);
+        Log.Info("UserEditor", "User to be deleted: " + userObjectToRemove.BrowseName + "Curr User: " + Session.User.BrowseName);
 
-        if (userObjectToRemove.BrowseName == "Pima")
+        if (userObjectToRemove.BrowseName == "Omori")
         {
 
             return;
             //usersFolder.Remove(userObjectToRemove);
             //-----------Customized Logic Start-----------------
             // Delete User Activity Logging into Audit Database
-           // AuditTrailLogging DeleteUser = new AuditTrailLogging();
-           // DeleteUser.LogIntoAudit("User deleted", userObjectToRemove.BrowseName, Session.User.BrowseName, "UserDeleteEvent");
+            // AuditTrailLogging DeleteUser = new AuditTrailLogging();
+            // DeleteUser.LogIntoAudit("User deleted", userObjectToRemove.BrowseName, Session.User.BrowseName, "UserDeleteEvent");
             //-----------Customized Logic End-------------------
-           // ShowMessage("User deleted successfully");
+            // ShowMessage("User deleted successfully");
         }
 
 
@@ -94,7 +98,7 @@ public class DeleteUserButtonLogic : BaseNetLogic
 
             //foreach (var child in UserDetails.Children.OfType<User_21CFR>())
             //{
-            //    if (child.BrowseName != "Pima")
+            //    if (child.BrowseName != "Omori")
             //    {
 
             //        var User = InformationModel.MakeObject<User_21CFR>(child.BrowseName);
@@ -107,7 +111,7 @@ public class DeleteUserButtonLogic : BaseNetLogic
             ShowMessage("LoggedIn user can not be deleted");
             Log.Error("DeleteUserButtonLogic", "LoggedIn user can not be deleted");
         }
-        
+
         if (usersFolder.Children.Count > 0)
         {
             var usersList = (ListBox)Owner.Owner.Owner.Get<ListBox>("HorizontalLayout1/UsersList");
@@ -117,28 +121,28 @@ public class DeleteUserButtonLogic : BaseNetLogic
 
 
     private void ShowMessage(string message)
-	{
-		Label DeleteResult = Project.Current.Get<Label>("UI/NewUserEditor/EditUserDetailPanel/HorizontalLayout1/Details/DeleteUserMessage");
+    {
+        Label DeleteResult = Project.Current.Get<Label>("UI/NewUserEditor/EditUserDetailPanel/HorizontalLayout1/Details/DeleteUserMessage");
         DeleteResult.Text = message;
         DeleteResult.Visible = true;
-		if (delayedTask != null)
-			delayedTask?.Dispose();
-		
-		delayedTask = new DelayedTask(DelayedAction, 1500, LogicObject);
-		delayedTask.Start();
-	}
+        if (delayedTask != null)
+            delayedTask?.Dispose();
 
-	private void DelayedAction(DelayedTask task)
-	{
+        delayedTask = new DelayedTask(DelayedAction, 1500, LogicObject);
+        delayedTask.Start();
+    }
+
+    private void DelayedAction(DelayedTask task)
+    {
         Label DeleteResult = Project.Current.Get<Label>("UI/NewUserEditor/EditUserDetailPanel/HorizontalLayout1/Details/DeleteUserMessage");
         DeleteResult.Text = "";
         DeleteResult.Visible = false;
-		delayedTask?.Dispose();
-		if (task.IsCancellationRequested)
-			return;
-        
-        
-	}
+        delayedTask?.Dispose();
+        if (task.IsCancellationRequested)
+            return;
+
+
+    }
 
     private DelayedTask delayedTask;
 

@@ -11,20 +11,24 @@ using FTOptix.Core;
 using FTOptix.AuditSigning;
 using FTOptix.Alarm;
 using FTOptix.WebUI;
+using FTOptix.SQLiteStore;
+using FTOptix.MicroController;
+using FTOptix.CommunicationDriver;
 using FTOptix.RAEtherNetIP;
+using FTOptix.DataLogger;
 #endregion
 
 public class GetUserStatus : BaseNetLogic
 {
-    
+
     public override void Start()
     {
         userVar = Owner.GetVariable("User");
         userVar.VariableChange += userVar_VariableChange;
-        
+
         UpdateUserBlockedState();
     }
-    
+
     private void userVar_VariableChange(object sender, VariableChangeEventArgs e)
     {
         UpdateUserBlockedState();
@@ -40,7 +44,7 @@ public class GetUserStatus : BaseNetLogic
 
         var useralias = LogicObject.GetAlias("Users");
         bool UserFound = false;
-        
+
         foreach (var child in useralias.Children)
         {
             if (child.BrowseName.Equals(selectedusername, StringComparison.OrdinalIgnoreCase))
@@ -57,5 +61,5 @@ public class GetUserStatus : BaseNetLogic
     }
 
     private IUAVariable userVar;
-    
+
 }
