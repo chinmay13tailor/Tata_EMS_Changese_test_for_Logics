@@ -840,11 +840,7 @@ public class RuntimeNetLogic2 : BaseNetLogic
             paintshoppercentage = paintshopP;
             sparepercentage = spareP;
             spppercentage = sppP;
-
-
-
-           
-            
+   
             /////////////////////////////////////////////////////*********************************************///////////////////////////////////////////////////////////////////////////
             monthyearVariable.Value = monthyear;
             yearVariable.Value = year;
@@ -935,10 +931,7 @@ public class RuntimeNetLogic2 : BaseNetLogic
             sparepercentageVariable.Value = sparepercentage;
             spppercentageVariable.Value = spppercentage;
 
-
-            
-           
-
+          
 
         }
 

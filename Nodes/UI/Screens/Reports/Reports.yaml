@@ -26666,6 +26666,25 @@ Children:
                     DataType: ResourceUri
                     Description: {"NamespaceIndex":17,"TextId":"GeneratePdfOutputPathDescription"}
                     Value: ""
+                    Children:
+                    - Name: StringFormatter1
+                      Type: StringFormatter
+                      Children:
+                      - Name: Format
+                        Type: BaseDataVariableType
+                        DataType: LocalizedText
+                        ReferenceType: HasParameter
+                        ModellingRule: Optional
+                        Value: {"LocaleId":"en-US","Text":"file:///{0}"}
+                      - Name: ns=3;Source0
+                        Type: BaseDataVariableType
+                        DataType: BaseDataType
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/Tata_EMS_Changese_test_for_Logics/Model/Reports/Third Report/DistributionPath"
                   - Name: LocaleId
                     Type: BaseDataVariableType
                     DataType: LocaleId
@@ -26740,12 +26759,12 @@ Children:
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
-            Value: 196.0
+            Value: 189.0
           - Name: TopMargin
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
-            Value: 10.0
+            Value: 15.0
           - Name: InputFormat
             Type: BaseDataVariableType
             DataType: DateTimePickerInputFormatEnum
@@ -26796,6 +26815,22 @@ Children:
                     Description: {"NamespaceIndex":3,"TextId":"SetArrayIndexDescription"}
                     ValueRank: ScalarOrOneDimension
                     Value: 0
+              - Name: MethodContainer5
+                Type: BaseObjectType
+                Children:
+                - Name: ns=3;ObjectPointer
+                  Type: NodePointer
+                  DataType: NodeId
+                  Value: "/Objects/Tata_EMS_Changese_test_for_Logics/Model/ConsumptionDistributionReportLogicInstance/RuntimeLogicConsumption"
+                  Children:
+                  - Name: Kind
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: ns=3;Method
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "IncrementDecrementTask"
               - Name: MethodContainer1
                 Type: BaseObjectType
                 Children:

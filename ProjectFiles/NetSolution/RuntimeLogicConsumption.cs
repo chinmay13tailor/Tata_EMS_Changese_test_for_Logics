@@ -1,8 +1,30 @@
 #region Using directives
 using System;
 using UAManagedCore;
+using OpcUa = UAManagedCore.OpcUa;
+using FTOptix.DataLogger;
+using FTOptix.HMIProject;
 using FTOptix.NetLogic;
+using FTOptix.NativeUI;
+using FTOptix.UI;
+using FTOptix.CoreBase;
+using FTOptix.Store;
+using FTOptix.ODBCStore;
+using FTOptix.Report;
+using FTOptix.RAEtherNetIP;
+using FTOptix.Retentivity;
+using FTOptix.CommunicationDriver;
+using FTOptix.Core;
 using Store = FTOptix.Store;
+using System.Text.RegularExpressions;
+using FTOptix.SQLiteStore;
+using System.Data;
+using System.Linq;
+using System.Data.SqlClient;
+using System.Reflection.Emit;
+using FTOptix.MicroController;
+using FTOptix.AuditSigning;
+using FTOptix.Alarm;
 using System.Threading;
 #endregion
 
@@ -21,7 +43,9 @@ public class RuntimeLogicConsumption : BaseNetLogic
         test1Variable = owner.Test1Variable;
         infoVariable = owner.INFOVariable;
 
-        //Utilit
+        //Utility
+       // jaceVariable = owner.JaceUtiVariable;
+       // meterVariable = owner.MeterUtiVariable;
         targetVariable = owner.TargetVariable;
         yearlowestVariable = owner.YearlowestVariable;
         monthlowestVariable = owner.MonthlowestVariable;
@@ -105,7 +129,7 @@ public class RuntimeLogicConsumption : BaseNetLogic
         spppercentageVariable = owner.SpppercentageVariable;
 
 
-       // periodicTask = new PeriodicTask(IncrementDecrementTask, 10000, LogicObject);
+        //periodicTask = new PeriodicTask(IncrementDecrementTask, 10000, LogicObject);
         //periodicTask.Start();
 
 
@@ -117,7 +141,7 @@ public class RuntimeLogicConsumption : BaseNetLogic
         //periodicTask.Dispose();
         //periodicTask = null;
     }
-
+    [ExportMethod]
     public void IncrementDecrementTask()
     {
         DateTime date = dateVariable.Value;
@@ -130,8 +154,8 @@ public class RuntimeLogicConsumption : BaseNetLogic
 
 
         //For Utility
-        int jace = jaceVariable.Value;
-        int meter = meterVariable.Value;
+       // int jace = jaceVariable.Value;
+        //int meter = meterVariable.Value;
         int target = targetVariable.Value;
         int yearlowest = yearlowestVariable.Value;
         int monthlowest = monthlowestVariable.Value;
@@ -817,10 +841,6 @@ public class RuntimeLogicConsumption : BaseNetLogic
             sparepercentage = spareP;
             spppercentage = sppP;
 
-
-
-
-
             /////////////////////////////////////////////////////*********************************************///////////////////////////////////////////////////////////////////////////
             monthyearVariable.Value = monthyear;
             yearVariable.Value = year;
@@ -913,9 +933,6 @@ public class RuntimeLogicConsumption : BaseNetLogic
 
 
 
-
-
-
         }
 
 
@@ -980,8 +997,8 @@ public class RuntimeLogicConsumption : BaseNetLogic
     private IUAVariable yearlowestpaintshopVariable;
     private IUAVariable monthlowestpaintshopVariable;
     private IUAVariable averagepaintshopVariable;
-    private IUAVariable jaceVariable;
-    private IUAVariable meterVariable;
+  //  private IUAVariable jaceVariable;
+   // private IUAVariable meterVariable;
     private IUAVariable targetVariable;
     private IUAVariable yearlowestVariable;
     private IUAVariable monthlowestVariable;
