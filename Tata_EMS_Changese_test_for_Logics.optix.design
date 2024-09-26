@@ -36,21 +36,22 @@ Project:
    Module: FTOptix.NetLogic
    Version: 1.0
  Statistics:
-  TotalNodeCount: 55
-  Objects: 11
+  TotalNodeCount: 60
+  Objects: 12
   ObjectTypes: 0
-  Variables: 44
+  Variables: 48
   VariableTypes: 0
   DataTypes: 0
   Methods: 0
   References: 0
   ReferenceTypes: 0
-  Files: 11
+  Files: 12
  Nodes:
  - File: DesignTimeNodes/CommDrivers/33KVMetersLatest/MicroControllerStation1/TagImporter.yaml
  - File: DesignTimeNodes/CommDrivers/33KVmeters/MicroControllerStation1/TagImporter.yaml
  - File: DesignTimeNodes/CommDrivers/AdminMeters/MicroControllerStation1/TagImporter.yaml
  - File: DesignTimeNodes/CommDrivers/BodyshopMeters/MicroControllerStation1/TagImporter.yaml
+ - File: DesignTimeNodes/CommDrivers/Bodyshopsubstation1/MicroControllerStation1/TagImporter.yaml
  - File: DesignTimeNodes/CommDrivers/PaintshopMeters/MicroControllerStation1/TagImporter.yaml
  - File: DesignTimeNodes/CommDrivers/PumpRoomMeters/MicroControllerStation1/TagImporter.yaml
  - File: DesignTimeNodes/CommDrivers/SPPMeters/MicroControllerStation1/TagImporter.yaml

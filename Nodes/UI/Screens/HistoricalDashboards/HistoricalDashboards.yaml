@@ -218,7 +218,7 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           ModellingRule: Optional
-          Value: "ScrollBarStyle1"
+          Value: "Default"
         - Name: RightMargin
           Type: BaseVariableType
           DataType: Size
@@ -14717,7 +14717,7 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           ModellingRule: Optional
-          Value: "ScrollBarStyle1"
+          Value: "Default"
         - Name: RightMargin
           Type: BaseVariableType
           DataType: Size
@@ -51324,7 +51324,7 @@ Children:
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
-            Value: 20.0
+            Value: 0.0
           - Name: S2_TotalConsumption1
             Type: Label
             Children:

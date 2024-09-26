@@ -7454,3 +7454,12 @@ Children:
   Value: "\"Timestamp\""
 - File: HomePageJaceWisePanel/HomePageJaceWisePanel.yaml
 - File: Screen_Management/Screen_Management.yaml
+- Name: ReportPanelVisibility
+  Id: g=b7de07eb98a941da3c552a0243677a02
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+- Name: Generatepara
+  Type: BaseDataVariableType
+  DataType: String
+  Value: ""

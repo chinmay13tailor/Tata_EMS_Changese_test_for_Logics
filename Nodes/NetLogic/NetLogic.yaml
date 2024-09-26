@@ -258,3 +258,9 @@ Children:
     Value: "1601-01-01T00:00:00.0000000"
 - Name: LogicForResetProductionAndTarget
   Type: NetLogic
+- Name: ReportGenerationDialogLogic
+  Id: g=e11ba6dff61f4ad360b485744110b662
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: Dialog

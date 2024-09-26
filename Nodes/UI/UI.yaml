@@ -54,11 +54,11 @@ Children:
   - Name: Protocol
     Type: BaseDataVariableType
     DataType: Protocol
-    Value: 1
+    Value: 0
   - Name: IPAddress
     Type: BaseDataVariableType
     DataType: String
-    Value: "172.29.128.80"
+    Value: "172.20.10.5"
   - Name: Port
     Type: BaseDataVariableType
     DataType: UInt16

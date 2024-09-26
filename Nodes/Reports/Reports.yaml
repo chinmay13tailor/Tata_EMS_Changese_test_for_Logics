@@ -2215,7 +2215,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 27.78125
+        Value: 27.940000534057617
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -2339,7 +2339,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 27.78125
+        Value: 27.940000534057617
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -2459,7 +2459,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 27.78125
+        Value: 27.940000534057617
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -2579,7 +2579,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 27.78125
+        Value: 27.940000534057617
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -2654,7 +2654,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 27.940000534057617
+            Value: 40.63999938964844
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -2710,7 +2710,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 25.399999618530273
+            Value: 33.02000045776367
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -2822,7 +2822,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 14.223999977111816
+            Value: 22.860000610351563
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -2847,7 +2847,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Consumption"}
+            Value: {"LocaleId":"en-US","Text":"Active Energy(KWh)"}
           - Name: HeaderAlignment
             Type: BaseDataVariableType
             DataType: TextHorizontalAlignment
@@ -2878,7 +2878,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 17.780000686645508
+            Value: 20.31999969482422
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -2903,7 +2903,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Active Power"}
+            Value: {"LocaleId":"en-US","Text":"Active Power(KW)"}
           - Name: HeaderAlignment
             Type: BaseDataVariableType
             DataType: TextHorizontalAlignment
@@ -2934,7 +2934,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 17.780000686645508
+            Value: 19.049999237060547
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -2990,7 +2990,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 17.780000686645508
+            Value: 19.049999237060547
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -3096,174 +3096,6 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Item}/Avg_PF"
-        - Name: Avg_Current
-          Type: ReportDataGridColumn
-          Children:
-          - Name: Width
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: 13.970000267028809
-            Children:
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                AccessLevel: Read
-                Value: 5066068
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Title
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Avg Current"}
-          - Name: HeaderAlignment
-            Type: BaseDataVariableType
-            DataType: TextHorizontalAlignment
-            Value: 1
-          - Name: ContentAlignment
-            Type: BaseVariableType
-            DataType: HorizontalAlignment
-            Value: 0
-          - Name: OrderBy
-            Type: BaseDataVariableType
-            DataType: NodePath
-            Value: "{Item}/Avg_Current"
-          - Name: DataItemTemplate
-            Type: ReportDataGridLabelItemTemplate
-            Children:
-            - Name: Text
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Item}/Avg_Current"
-        - Name: Voltage_LL
-          Type: ReportDataGridColumn
-          Children:
-          - Name: Width
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: 12.699999809265137
-            Children:
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                AccessLevel: Read
-                Value: 5066068
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Title
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Voltage_LL"}
-          - Name: HeaderAlignment
-            Type: BaseDataVariableType
-            DataType: TextHorizontalAlignment
-            Value: 1
-          - Name: ContentAlignment
-            Type: BaseVariableType
-            DataType: HorizontalAlignment
-            Value: 0
-          - Name: OrderBy
-            Type: BaseDataVariableType
-            DataType: NodePath
-            Value: "{Item}/Voltage_LL"
-          - Name: DataItemTemplate
-            Type: ReportDataGridLabelItemTemplate
-            Children:
-            - Name: Text
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Item}/Voltage_LL"
-        - Name: Voltage_LN
-          Type: ReportDataGridColumn
-          Children:
-          - Name: Width
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: 12.699999809265137
-            Children:
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                AccessLevel: Read
-                Value: 5066068
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Title
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Voltage_LN"}
-          - Name: HeaderAlignment
-            Type: BaseDataVariableType
-            DataType: TextHorizontalAlignment
-            Value: 1
-          - Name: ContentAlignment
-            Type: BaseVariableType
-            DataType: HorizontalAlignment
-            Value: 0
-          - Name: OrderBy
-            Type: BaseDataVariableType
-            DataType: NodePath
-            Value: "{Item}/Voltage_LN"
-          - Name: DataItemTemplate
-            Type: ReportDataGridLabelItemTemplate
-            Children:
-            - Name: Text
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Item}/Voltage_LN"
         - Name: Frequency
           Type: ReportDataGridColumn
           Children:
@@ -21016,7 +20848,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"LocalTime"}
+            Value: {"LocaleId":"en-US","Text":"Date Time"}
           - Name: HeaderAlignment
             Type: BaseDataVariableType
             DataType: TextHorizontalAlignment
@@ -22672,7 +22504,7 @@ Children:
       - Name: Width
         Type: BaseDataVariableType
         DataType: Size
-        Value: 25.929166793823242
+        Value: -1.0
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -22731,7 +22563,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 28.045833587646484
+        Value: 25.399999618530273
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -22753,13 +22585,50 @@ Children:
             DataType: LocalizedText
             ReferenceType: HasProperty
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: TextHorizontalAlignment
+        Type: BaseVariableType
+        DataType: TextHorizontalAlignment
+        Value: 1
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        Value: 1
+      - Name: Height
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 6.349999904632568
+        Children:
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            AccessLevel: Read
+            Value: 5066068
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
     - Name: Label3
       Type: ReportLabel
       Children:
       - Name: Width
         Type: BaseDataVariableType
         DataType: Size
-        Value: 37.04166793823242
+        Value: -1.0
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -22793,7 +22662,7 @@ Children:
       - Name: LeftMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 26.45833396911621
+        Value: 31.75
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -22818,7 +22687,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 28.045833587646484
+        Value: 25.399999618530273
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -22840,6 +22709,43 @@ Children:
             DataType: LocalizedText
             ReferenceType: HasProperty
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: TextHorizontalAlignment
+        Type: BaseVariableType
+        DataType: TextHorizontalAlignment
+        Value: 1
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        Value: 1
+      - Name: Height
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 6.349999904632568
+        Children:
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            AccessLevel: Read
+            Value: 5066068
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
     - Name: FTOptixLogo
       Type: ReportImage
       Children:
@@ -23611,7 +23517,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 25.929166793823242
+        Value: 25.399999618530273
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -23788,7 +23694,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 26.987499237060547
+        Value: 25.399999618530273
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -24015,7 +23921,7 @@ Children:
       - Name: Width
         Type: BaseDataVariableType
         DataType: Size
-        Value: 18.785417556762695
+        Value: 18.78540802001953
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -24076,7 +23982,7 @@ Children:
       - Name: Width
         Type: BaseDataVariableType
         DataType: Size
-        Value: 32.80833435058594
+        Value: -1.0
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -24110,7 +24016,7 @@ Children:
       - Name: LeftMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 154.51666259765625
+        Value: 167.63999938964844
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -24135,7 +24041,7 @@ Children:
       - Name: TopMargin
         Type: BaseDataVariableType
         DataType: Size
-        Value: 26.987499237060547
+        Value: 25.399999618530273
         Children:
         - Name: EngineeringUnits
           Type: EUInformationType
@@ -24165,6 +24071,35 @@ Children:
         Type: BaseVariableType
         DataType: TextVerticalAlignment
         Value: 1
+      - Name: Height
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 6.349999904632568
+        Children:
+        - Name: EngineeringUnits
+          Type: EUInformationType
+          DataType: EUInformation
+          Children:
+          - Name: UnitId
+            Type: BaseVariableType
+            DataType: Int32
+            ReferenceType: HasProperty
+            AccessLevel: Read
+            Value: 5066068
+          - Name: DisplayName
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          - Name: Description
+            Type: BaseVariableType
+            DataType: LocalizedText
+            ReferenceType: HasProperty
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
   - Name: Sections
     Type: ReportColumnLayout
     Children:
@@ -24206,7 +24141,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"LocalDate"}
+            Value: {"LocaleId":"en-US","Text":"Date"}
           - Name: HeaderAlignment
             Type: BaseDataVariableType
             DataType: TextHorizontalAlignment
@@ -24349,7 +24284,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 13.970000267028809
+            Value: 22.860000610351563
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24374,7 +24309,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Consumption"}
+            Value: {"LocaleId":"en-US","Text":"Active Energy (KWh)"}
           - Name: HeaderAlignment
             Type: BaseDataVariableType
             DataType: TextHorizontalAlignment
@@ -24405,7 +24340,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 21.59000015258789
+            Value: 17.780000686645508
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24430,7 +24365,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Active_Power"}
+            Value: {"LocaleId":"en-US","Text":"Active Power"}
           - Name: HeaderAlignment
             Type: BaseDataVariableType
             DataType: TextHorizontalAlignment
@@ -24461,7 +24396,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 22.860000610351563
+            Value: 17.780000686645508
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24517,7 +24452,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 24.1299991607666
+            Value: 17.780000686645508
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24542,7 +24477,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Apparent_Power"}
+            Value: {"LocaleId":"en-US","Text":"Apparent Power"}
           - Name: HeaderAlignment
             Type: BaseDataVariableType
             DataType: TextHorizontalAlignment
@@ -24573,7 +24508,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 11.175999641418457
+            Value: 12.699999809265137
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24629,7 +24564,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 8.890000343322754
+            Value: 10.15999984741211
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24685,7 +24620,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 12.699999809265137
+            Value: 17.780000686645508
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24741,7 +24676,7 @@ Children:
           - Name: Width
             Type: BaseDataVariableType
             DataType: Size
-            Value: 12.699999809265137
+            Value: 17.780000686645508
             Children:
             - Name: EngineeringUnits
               Type: EUInformationType
@@ -24791,62 +24726,6 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Item}/Voltage_LL"
-        - Name: Avg_Current
-          Type: ReportDataGridColumn
-          Children:
-          - Name: Width
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: 12.699999809265137
-            Children:
-            - Name: EngineeringUnits
-              Type: EUInformationType
-              DataType: EUInformation
-              Children:
-              - Name: UnitId
-                Type: BaseVariableType
-                DataType: Int32
-                ReferenceType: HasProperty
-                AccessLevel: Read
-                Value: 5066068
-              - Name: DisplayName
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              - Name: Description
-                Type: BaseVariableType
-                DataType: LocalizedText
-                ReferenceType: HasProperty
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-          - Name: Title
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"Avg\nCurrent"}
-          - Name: HeaderAlignment
-            Type: BaseDataVariableType
-            DataType: TextHorizontalAlignment
-            Value: 0
-          - Name: ContentAlignment
-            Type: BaseVariableType
-            DataType: HorizontalAlignment
-            Value: 0
-          - Name: OrderBy
-            Type: BaseDataVariableType
-            DataType: NodePath
-            Value: "{Item}/Avg_Current"
-          - Name: DataItemTemplate
-            Type: ReportDataGridLabelItemTemplate
-            Children:
-            - Name: Text
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Item}/Avg_Current"
       - Name: SelectedItem
         Type: NodePointer
         DataType: NodeId
