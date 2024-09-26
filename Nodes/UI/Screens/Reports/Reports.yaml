@@ -28788,7 +28788,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "{PanelLoaderDailyReport}@NodeId"
+                    Value: "{ConsumptiondistributionReportView}@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -29020,7 +29020,7 @@ Children:
                 - Name: ns=3;ObjectPointer
                   Type: NodePointer
                   DataType: NodeId
-                  Value: "/Objects/Tata_EMS_Changese_test_for_Logics/Reports/ConsumptionDistributionReport1"
+                  Value: "/Objects/Tata_EMS_Changese_test_for_Logics/Reports/ConsumptionDistributionReport"
                   Children:
                   - Name: Kind
                     Type: PropertyType
@@ -29070,6 +29070,22 @@ Children:
                     DataType: Guid
                     Description: {"NamespaceIndex":17,"TextId":"GeneratePdfOperationIdDescription"}
                     Value: "00000000000000000000000000000000"
+              - Name: MethodContainer6
+                Type: BaseObjectType
+                Children:
+                - Name: ns=3;ObjectPointer
+                  Type: NodePointer
+                  DataType: NodeId
+                  Value: "/Objects/Tata_EMS_Changese_test_for_Logics/NetLogic/ReportGenerationDialogLogic"
+                  Children:
+                  - Name: Kind
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: ns=3;Method
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "Dialog"
             - Name: EventArguments
               Type: MouseClickEvent
               Children:
@@ -29603,7 +29619,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 30.0
-      - Name: PanelLoader1
+      - Name: ConsumptiondistributionReportView
         Type: PanelLoader
         Children:
         - Name: Panel
@@ -29647,7 +29663,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 100.0
+          Value: 169.0
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -29745,6 +29761,188 @@ Children:
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 2
+      - Name: Label2
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Tata_EMS_Changese_test_for_Logics/Model/Generatepara"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 70.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 119.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: Rotation
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 0.0
+        - Name: FontSize
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 18.0
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 0.0
+      - Name: Button1
+        Type: Button
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":""}
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -92.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 101.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 60.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 60.0
+        - Name: ImagePath
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: "ns=36;%PROJECTDIR%/Loading.png"
+        - Name: BackgroundColor
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: Appearance
+          Type: BaseVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "transparent"
+        - Name: NumberAnimation1
+          Type: NumberAnimation
+          Children:
+          - Name: To
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 360.0
+          - Name: Target
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/VariableTypes/BaseVariableType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../Rotation@NodeId"
+          - Name: Running
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Duration
+            Type: BaseDataVariableType
+            DataType: Int32
+            ModellingRule: Optional
+            Value: 2500
+          - Name: Loops
+            Type: BaseDataVariableType
+            DataType: Int32
+            ModellingRule: Optional
+            Value: -1
+        - Name: Rotation
+          Type: BaseVariableType
+          DataType: Size
+          Value: 0.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 0.0
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Value: false
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Expression
+                  Type: BaseDataVariableType
+                  DataType: String
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: "{0} == \"Generating....\""
+                - Name: ns=3;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Tata_EMS_Changese_test_for_Logics/Model/Generatepara"
+            - Name: TrueValue
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: true
+            - Name: FalseValue
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: false
   - Name: CategoryName
     Type: BaseDataVariableType
     DataType: LocalizedText
